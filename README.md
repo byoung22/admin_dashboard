@@ -1,1 +1,1 @@
-# admin_dashboard
+Making a simple dashboard using the CSS grid display style

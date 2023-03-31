@@ -1,0 +1,139 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.container {
+    grid-template: 1fr 1fr 7fr 7fr 1fr / minmax(180px, 2fr) 8fr minmax(200px, 3fr);
+
+    height: 100vh;
+    display: grid;
+}
+
+.header {
+    grid-area: 1 / 2 / 2 / -1;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0 2vw;
+}
+.header .search-bar {
+    flex: 1;
+}
+.header .profile {
+    display: flex;
+    gap: 20px;
+}
+
+.sticky-header {
+    grid-area: 2 / 2 / 3 / -1;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0 2vw;
+}
+.sticky-header .username {
+    flex: 1;
+}
+
+
+.sidebar {
+    grid-area: 1 / 1 / -2 / 2;
+
+    background-color: #27272a;
+}
+.sidebar .side{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 10px;
+    
+    background-color: #27272a;
+}
+.sidebar .menu {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar .menu .side {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 0;
+    padding: 0 18px;
+    
+    background-color: #27272a;
+}
+.sidebar .menu .side img {
+    height: 30px;
+}
+.sidebar .title img {
+    height: 50px;
+}
+.sidebar .title div,
+.sidebar .menu .side div {
+    color: #f4c45d;
+}
+
+.article {
+    grid-area: 3 / 2 / -2 / 3;
+    
+    background-color: #f1f5f9;
+}
+
+.announcements {
+    grid-area: 3 / -2 / 4 / -1;
+}
+
+.trending {
+    grid-area: 4 / -2 / 5 / -1;
+}
+
+.footer {
+    grid-area: -2 / 1 / -1 / -1;
+}
